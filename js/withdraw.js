@@ -23,7 +23,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     // Update Balance
     balanceTotalElement = document.getElementById('balance-total');
     balanceTotal = parseFloat(balanceTotalElement.innerText);
-
+    if (balanceTotal < withdrawAmount) {
+        return alert("Baap er Bank e Taka nai");
+    }
     if (isNaN(parseFloat(withdrawAmount))) {
         balanceTotalElement.innerText = balanceTotal.toFixed(2);
     } else {
