@@ -22,7 +22,7 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     balanceTotal = parseFloat(balanceTotalElement.innerText);
 
     if (isNaN(parseFloat(depositAmount))) {
-        balanceTotalElement.innerText = (balanceTotal + 0).toFixed(2);
+        balanceTotalElement.innerText = balanceTotal.toFixed(2);
     } else {
         balanceTotalElement.innerText = (balanceTotal + parseFloat(depositAmount)).toFixed(2);
     }
