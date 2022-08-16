@@ -1,7 +1,7 @@
 document.getElementById('btn-withdraw').addEventListener('click', function () {
     // Get the withdraw amount
     const withdrawField = document.getElementById('withdraw-field');
-    const withdrawAmount = parseFloat(withdrawField.value);
+    const withdrawAmount = parseFloat(Math.abs(withdrawField.value));
 
     // Get the Withdraw Total Elements value
     const withdrawTotalElement = document.getElementById('withdraw-total');
